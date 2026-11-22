@@ -42,13 +42,13 @@ html[lang=te] .short{letter-spacing:0;font-size:12px}
 /* story */
 .story{height:100vh;height:100svh;position:relative}
 .stage{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;background:#5d3048}
-.scene{position:absolute;inset:0;opacity:0;transform:scale(1.08);transition:opacity 2s ease-in-out;will-change:opacity,transform}
+.scene{position:absolute;top:0;right:0;bottom:0;left:0;opacity:0;transform:scale(1.08);transition:opacity 2s ease-in-out;will-change:opacity,transform}
 .scene.prev{opacity:1;z-index:1;transition:none}
 .scene.on{opacity:1;z-index:2}
 .scene.on,.scene.prev{animation:kb 14s linear both}
 @keyframes kb{from{transform:scale(1.08)}to{transform:scale(1)}}
 .scene>svg{width:100%;height:100%;display:block}
-.vig{position:absolute;inset:0;pointer-events:none;z-index:3;background:radial-gradient(ellipse at 50% 55%,transparent 40%,rgba(70,30,48,.32) 100%),linear-gradient(180deg,rgba(70,30,48,.3),transparent 30%,transparent 72%,rgba(70,30,48,.3))}
+.vig{position:absolute;top:0;right:0;bottom:0;left:0;pointer-events:none;z-index:3;background:radial-gradient(ellipse at 50% 55%,transparent 40%,rgba(70,30,48,.32) 100%),linear-gradient(180deg,rgba(70,30,48,.3),transparent 30%,transparent 72%,rgba(70,30,48,.3))}
 .toran{position:absolute;z-index:4;top:0;left:0;width:100%;height:auto;pointer-events:none;filter:drop-shadow(0 4px 6px rgba(0,0,0,.35))}
 .open{position:absolute;z-index:6;left:50%;transform:translateX(-50%);bottom:max(58px,calc(env(safe-area-inset-bottom) + 40px));padding:12px 26px;border-radius:99px;background:rgba(255,248,238,.92);color:#9b4f57;font:italic 500 18px var(--serif);letter-spacing:.03em;box-shadow:0 8px 26px rgba(80,36,52,.3);white-space:nowrap}
 html[lang=te] .open{font-style:normal;font-size:15px;font-weight:600}
@@ -62,7 +62,7 @@ html[lang=te] .open{font-style:normal;font-size:15px;font-weight:600}
 .dots .now i{animation:fillb 5s linear forwards}
 @keyframes fillb{to{width:100%}}
 .copy.on{opacity:1;transform:none;transition:opacity 1.6s ease .8s,transform 2s ease .8s}
-.petals{position:absolute;inset:0;z-index:4;opacity:.8;pointer-events:none;overflow:hidden}
+.petals{position:absolute;top:0;right:0;bottom:0;left:0;z-index:4;opacity:.8;pointer-events:none;overflow:hidden}
 .petals i{position:absolute;top:-30px;width:11px;height:11px;border-radius:50%;background:radial-gradient(circle,#ffd77a 30%,#f2a35a 100%);opacity:0;animation:fall linear infinite;filter:blur(.3px)}
 .petals i.j{width:8px;height:8px;background:#fffaf0;box-shadow:0 0 6px #fff}
 .petals i.r{width:11px;height:14px;border-radius:80% 0 80% 0;background:linear-gradient(135deg,#ffd0d8,#e8506f)}
@@ -134,8 +134,8 @@ html[lang=te] .job{font-style:normal;font-size:14px}
 .para{margin:24px auto 0;font:400 17px/1.95 var(--b);color:var(--ink2);max-width:470px}
 html[lang=te] .para{font-size:15px;line-height:2}
 .wreathbox{position:relative;width:300px;height:300px;margin:0 auto}
-.wreathbox svg{position:absolute;inset:0;width:100%;height:100%}
-.wreathbox .in{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0}
+.wreathbox svg{position:absolute;top:0;right:0;bottom:0;left:0;width:100%;height:100%}
+.wreathbox .in{position:absolute;top:0;right:0;bottom:0;left:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0}
 .wreathbox small{font:italic 400 16px var(--b);color:var(--mut)}
 .wreathbox .n{font:400 84px/1 var(--h);color:var(--rose-d)}
 .wreathbox .mo{font:500 13px var(--h);letter-spacing:.16em;color:var(--sage-d);text-transform:uppercase;margin-top:-2px}
@@ -148,7 +148,7 @@ html[lang=te] .wreathbox .mo{letter-spacing:0;text-transform:none;font-size:15px
 .cd span{font:italic 400 11px var(--b);color:var(--mut)}
 html[lang=te] .cd span{font-style:normal;font-size:10px}
 .arch{background:#fffaf0;border:1.5px solid #d9b46a;border-radius:220px 220px 28px 28px;padding:84px 22px 32px;margin-top:34px;position:relative;box-shadow:0 18px 44px rgba(160,90,40,.18)}
-.arch::before{content:"";position:absolute;inset:8px;border:1px dashed #e2c487;border-radius:212px 212px 20px 20px;pointer-events:none}
+.arch::before{content:"";position:absolute;top:8px;right:8px;bottom:8px;left:8px;border:1px dashed #e2c487;border-radius:212px 212px 20px 20px;pointer-events:none}
 .arch .ic{position:absolute;top:22px;left:50%;transform:translateX(-50%);width:64px;height:64px}
 .arch .kick{margin-bottom:2px}
 .arch h3{font:500 29px/1.25 var(--h);color:var(--rose-d)}
@@ -183,19 +183,20 @@ html[lang=te] .contact address{font-style:normal;font-size:15px}
 .back{display:block;margin:0 auto;padding:30px 0 calc(36px + env(safe-area-inset-bottom));font:italic 400 17px var(--h);color:var(--rose-d);text-align:center;background:#f8e1cd}
 .back .sc{display:block;font:400 34px var(--sc);color:var(--rose);margin-bottom:6px}
 html[lang=te] .back .sc{font:700 20px var(--h)}
-.fade{opacity:0;transform:translateY(16px);transition:opacity 1.3s ease,transform 1.3s ease}
-.fade.in{opacity:1;transform:none}
-@media (prefers-reduced-motion:reduce){.scene{transition:opacity 1s}.open b{animation:none}.fade{opacity:1;transform:none;transition:none}}
+.js .fade{opacity:0;transform:translateY(16px);transition:opacity 1.3s ease,transform 1.3s ease}
+.js .fade.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.scene{transition:opacity 1s}.open b{animation:none}.js .fade{opacity:1;transform:none;transition:none}}
 </style>
 </head>
 <body>
+<script>document.documentElement.className+=" js"</script>
 
 <!-- shared symbols -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
   <g id="diya"><path class="flame" d="M30 6c11 13 13 22 0 31-13-9-11-18 0-31z" fill="#ffb627"/><path class="flame" d="M30 19c5 7 5 11 0 15-5-4-5-8 0-15z" fill="#fff3b0"/><path d="M4 42h52c0 15-11 23-26 23S4 57 4 42z" fill="#c9962f"/><path d="M4 42h52" stroke="#f0cf7d" stroke-width="2"/></g>
   <g id="leaf"><path d="M0 0C9 10 9 30 0 44C-9 30-9 10 0 0Z" fill="#3f8a2e"/><path d="M0 2V40" stroke="#bfe08a" stroke-width="1"/></g>
   <g id="kalash">
-    <g transform="translate(0 -6)"><use href="#leaf" transform="rotate(-62) translate(0 -42) scale(.9)"/><use href="#leaf" transform="rotate(-32) translate(0 -46)"/><use href="#leaf" transform="rotate(32) translate(0 -46)"/><use href="#leaf" transform="rotate(62) translate(0 -42) scale(.9)"/><use href="#leaf" transform="translate(0 -50)"/></g>
+    <g transform="translate(0 -6)"><use href="#leaf" xlink:href="#leaf" transform="rotate(-62) translate(0 -42) scale(.9)"/><use href="#leaf" xlink:href="#leaf" transform="rotate(-32) translate(0 -46)"/><use href="#leaf" xlink:href="#leaf" transform="rotate(32) translate(0 -46)"/><use href="#leaf" xlink:href="#leaf" transform="rotate(62) translate(0 -42) scale(.9)"/><use href="#leaf" xlink:href="#leaf" transform="translate(0 -50)"/></g>
     <circle cx="0" cy="-30" r="14" fill="#7a4a22"/><circle cx="-4" cy="-33" r="1.8" fill="#3a2010"/><circle cx="4" cy="-33" r="1.8" fill="#3a2010"/><circle cx="0" cy="-27" r="1.8" fill="#3a2010"/><path d="M-14-30Q0-48 14-30" fill="none" stroke="#a87a3a" stroke-width="2"/>
     <path d="M-24 0H24L20 8H-20Z" fill="#cc5563"/><path d="M-20 8Q-34 36-18 54Q0 62 18 54Q34 36 20 8Z" fill="#d9a441"/><path d="M-20 8Q-34 36-18 54Q0 62 18 54Q34 36 20 8Z" fill="none" stroke="#8a5a14" stroke-width="1.5"/>
     <path d="M-26 22Q0 34 26 22" fill="none" stroke="#a8505a" stroke-width="3"/><circle cx="0" cy="40" r="5" fill="#cc5563"/>
@@ -234,7 +235,7 @@ html[lang=te] .back .sc{font:700 20px var(--h)}
     <g class="spin" id="mandalaA" opacity=".35" style="transform-origin:200px 610px"></g>
     <g transform="translate(0 62)">
       <!-- lotus seat -->
-      <g transform="translate(200 742) scale(.9)"><use href="#lotus"/></g>
+      <g transform="translate(200 742) scale(.9)"><use href="#lotus" xlink:href="#lotus"/></g>
       <ellipse cx="200" cy="706" rx="88" ry="26" fill="#c98428"/>
       <!-- belly & body -->
       <ellipse cx="200" cy="640" rx="64" ry="70" fill="#e9a43a"/>
@@ -264,9 +265,9 @@ html[lang=te] .back .sc{font:700 20px var(--h)}
       <path d="M156 572Q200 640 244 572" fill="none" stroke="#e0405a" stroke-width="7" stroke-dasharray="1 9" stroke-linecap="round"/>
     </g>
     <!-- kalash -->
-    <g transform="translate(52 735) scale(.95)"><use href="#kalash"/></g>
-    <g transform="translate(348 735) scale(.95)"><use href="#kalash"/></g>
-    <g transform="translate(96 752) scale(.5)"><use href="#diya"/></g><g transform="translate(274 752) scale(.5)"><use href="#diya"/></g>
+    <g transform="translate(52 735) scale(.95)"><use href="#kalash" xlink:href="#kalash"/></g>
+    <g transform="translate(348 735) scale(.95)"><use href="#kalash" xlink:href="#kalash"/></g>
+    <g transform="translate(96 752) scale(.5)"><use href="#diya" xlink:href="#diya"/></g><g transform="translate(274 752) scale(.5)"><use href="#diya" xlink:href="#diya"/></g>
     <g class="tw" fill="#ffe08a"><circle cx="40" cy="170" r="1.6"/><circle cx="360" cy="150" r="1.6" style="animation-delay:-1s"/><circle cx="90" cy="320" r="1.2" style="animation-delay:-2s"/><circle cx="330" cy="330" r="1.4" style="animation-delay:-.6s"/></g>
    </svg>
   </div>
@@ -286,8 +287,8 @@ html[lang=te] .back .sc{font:700 20px var(--h)}
     <!-- outer pillars (banana stem, flowers) -->
     <g><rect x="30" y="90" width="30" height="620" fill="url(#pil)"/><rect x="340" y="90" width="30" height="620" fill="url(#pil)"/></g>
     <g id="pilRings"></g>
-    <g transform="translate(45 100)"><use href="#leaf" transform="rotate(-70) scale(1.6)"/><use href="#leaf" transform="rotate(-35) scale(1.8)"/><use href="#leaf" transform="rotate(10) scale(1.6)"/></g>
-    <g transform="translate(355 100)"><use href="#leaf" transform="rotate(70) scale(1.6)"/><use href="#leaf" transform="rotate(35) scale(1.8)"/><use href="#leaf" transform="rotate(-10) scale(1.6)"/></g>
+    <g transform="translate(45 100)"><use href="#leaf" xlink:href="#leaf" transform="rotate(-70) scale(1.6)"/><use href="#leaf" xlink:href="#leaf" transform="rotate(-35) scale(1.8)"/><use href="#leaf" xlink:href="#leaf" transform="rotate(10) scale(1.6)"/></g>
+    <g transform="translate(355 100)"><use href="#leaf" xlink:href="#leaf" transform="rotate(70) scale(1.6)"/><use href="#leaf" xlink:href="#leaf" transform="rotate(35) scale(1.8)"/><use href="#leaf" xlink:href="#leaf" transform="rotate(-10) scale(1.6)"/></g>
     <!-- canopy -->
     <path d="M0 40H400V140Q300 168 200 140Q100 168 0 140Z" fill="#c4505c"/>
     <path d="M0 62H400" stroke="#f0cf7d" stroke-width="3"/><path d="M0 118Q100 146 200 118Q300 146 400 118" fill="none" stroke="#f0cf7d" stroke-width="3"/>
@@ -304,9 +305,9 @@ html[lang=te] .back .sc{font:700 20px var(--h)}
       <g transform="translate(0 -6) scale(1.2)"><path class="flame" d="M0 0C-12-22-8-40 0-60C10-40 12-22 0 0Z" fill="#ff9a1f"/><path class="flame" d="M0 0C-5-12-3-22 0-32C4-22 5-12 0 0Z" fill="#fff0a0"/></g>
       <g transform="translate(28 -6) scale(.9)"><path class="flame" style="animation-delay:-.5s" d="M0 0C-10-18-6-32 0-48C8-32 10-18 0 0Z" fill="#ff7a14"/></g>
     </g>
-    <g transform="translate(86 720) scale(.9)"><use href="#kalash"/></g>
-    <g transform="translate(314 720) scale(.9)"><use href="#kalash"/></g>
-    <g transform="translate(138 770) scale(.5)"><use href="#diya"/></g><g transform="translate(232 770) scale(.5)"><use href="#diya"/></g>
+    <g transform="translate(86 720) scale(.9)"><use href="#kalash" xlink:href="#kalash"/></g>
+    <g transform="translate(314 720) scale(.9)"><use href="#kalash" xlink:href="#kalash"/></g>
+    <g transform="translate(138 770) scale(.5)"><use href="#diya" xlink:href="#diya"/></g><g transform="translate(232 770) scale(.5)"><use href="#diya" xlink:href="#diya"/></g>
     <g id="sparkB" fill="#ffe08a"></g>
    </svg>
   </div>
@@ -336,7 +337,7 @@ html[lang=te] .back .sc{font:700 20px var(--h)}
     <g transform="translate(304 690)"><circle r="62" fill="url(#plate)"/><circle r="52" fill="none" stroke="#fff3c4" stroke-width="1.5" stroke-dasharray="2 4"/><path d="M-30 14Q0-46 30 14Z" fill="#f4b81c"/><path d="M-30 14Q0-46 30 14Z" fill="none" stroke="#a87a10" stroke-width="1"/></g>
     <!-- coconut + betel -->
     <g transform="translate(200 690)">
-      <use href="#leaf" transform="rotate(-70) translate(0 -8) scale(.95)"/><use href="#leaf" transform="rotate(-30) translate(0 -12) scale(1.1)"/><use href="#leaf" transform="rotate(30) translate(0 -12) scale(1.1)"/><use href="#leaf" transform="rotate(70) translate(0 -8) scale(.95)"/>
+      <use href="#leaf" xlink:href="#leaf" transform="rotate(-70) translate(0 -8) scale(.95)"/><use href="#leaf" xlink:href="#leaf" transform="rotate(-30) translate(0 -12) scale(1.1)"/><use href="#leaf" xlink:href="#leaf" transform="rotate(30) translate(0 -12) scale(1.1)"/><use href="#leaf" xlink:href="#leaf" transform="rotate(70) translate(0 -8) scale(.95)"/>
       <circle r="34" fill="#7a4a22"/><circle r="34" fill="none" stroke="#a87a3a" stroke-width="2"/><circle cx="-8" cy="-8" r="3" fill="#3a2010"/><circle cx="8" cy="-8" r="3" fill="#3a2010"/><circle cx="0" cy="2" r="3" fill="#3a2010"/>
       <path d="M-34 -6Q0 8 34 -6" fill="none" stroke="#cc5563" stroke-width="4"/>
     </g>
@@ -453,7 +454,7 @@ html[lang=te] .back .sc{font:700 20px var(--h)}
 <section id="invitation">
  <svg class="band" id="band1" viewBox="0 0 400 46" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="6" x2="400" y2="6" stroke="#c0914a" stroke-width="2"/></svg>
  <div class="sec fade">
-  <svg class="sprig"><use href="#sprig"/></svg>
+  <svg class="sprig"><use href="#sprig" xlink:href="#sprig"/></svg>
   <p class="sri"><span data-en>|| Sri Ganeshaya Namaha ||</span><span data-te>|| శ్రీ గణేశాయ నమః ||</span></p>
   <p class="kick"><span data-en>Together with their families</span><span data-te>కుటుంబ సభ్యులతో కలిసి</span></p>
   <h2><span data-en>Wedding Invitation</span><span data-te>వివాహ ఆహ్వాన శుభపత్రిక</span></h2>
@@ -465,7 +466,7 @@ html[lang=te] .back .sc{font:700 20px var(--h)}
  </div>
 
  <div class="sec fade" style="padding-top:6px;padding-bottom:30px">
-  <svg class="sprig"><use href="#sprig"/></svg>
+  <svg class="sprig"><use href="#sprig" xlink:href="#sprig"/></svg>
   <p class="lbl"><span data-en>From</span><span data-te>ఆహ్వానించువారు</span></p>
   <p class="fam"><span data-en>Smt &amp; Sri Somishetty Pavithra – Aravind Gupta</span><span data-te>శ్రీమతి &amp; శ్రీ సోమిశెట్టి పవిత్ర – అరవింద్ గుప్తా</span></p>
   <p class="fam"><span data-en>Smt &amp; Sri Somishetty Veena – Venkatesh Gupta</span><span data-te>శ్రీమతి &amp; శ్రీ సోమిశెట్టి వీణ – వెంకటేశ్వర్లు</span></p>
@@ -491,12 +492,12 @@ html[lang=te] .back .sc{font:700 20px var(--h)}
  </div>
 
  <div class="sec fade" style="padding-top:10px">
-  <svg class="sprig"><use href="#sprig"/></svg>
+  <svg class="sprig"><use href="#sprig" xlink:href="#sprig"/></svg>
   <p class="kick"><span data-en>With open hearts, we invite you</span><span data-te>ఆనందంగా మిమ్మల్ని ఆహ్వానిస్తున్నాము</span></p>
   <h2><span data-en>The Celebrations</span><span data-te>వేడుకలు</span></h2>
 
   <article class="arch">
-    <svg class="ic" viewBox="-44 -104 88 170"><use href="#kalash"/></svg>
+    <svg class="ic" viewBox="-44 -104 88 170"><use href="#kalash" xlink:href="#kalash"/></svg>
     <p class="kick"><span data-en>Sumuhurtham</span><span data-te>సుముహూర్తం</span></p>
     <h3><span data-en>The Wedding</span><span data-te>వివాహ వేడుక</span></h3>
     <p class="when"><span data-en>Thursday · 3rd December 2026</span><span data-te>గురువారం · 3-12-2026</span></p>
@@ -510,7 +511,7 @@ html[lang=te] .back .sc{font:700 20px var(--h)}
   </article>
 
   <article class="arch">
-    <svg class="ic" viewBox="0 0 60 70"><use href="#diya"/></svg>
+    <svg class="ic" viewBox="0 0 60 70"><use href="#diya" xlink:href="#diya"/></svg>
     <p class="kick"><span data-en>Pooja</span><span data-te>పూజ</span></p>
     <h3><span data-en>Satyanarayana Swamy Vratham</span><span data-te>సత్యనారాయణ స్వామి వ్రతం</span></h3>
     <p class="when"><span data-en>Saturday · 5th December 2026</span><span data-te>శనివారం · 5-12-2026</span></p>
@@ -530,7 +531,7 @@ html[lang=te] .back .sc{font:700 20px var(--h)}
 
  <div class="sec contact fade">
   <div>
-   <svg class="sprig"><use href="#sprig"/></svg>
+   <svg class="sprig"><use href="#sprig" xlink:href="#sprig"/></svg>
    <p class="kick"><span data-en>Your presence is our most cherished blessing</span><span data-te>మీ రాక మాకు అత్యంత ఆనందం</span></p>
    <h2><span data-en>Get in touch</span><span data-te>సంప్రదించండి</span></h2>
    <div class="btns" style="margin-top:26px">
@@ -550,7 +551,7 @@ html[lang=te] .back .sc{font:700 20px var(--h)}
 (function(){
   var root=document.documentElement, ns='http://www.w3.org/2000/svg';
   function $(i){return document.getElementById(i)}
-  function mk(tag,attrs,parent){var e=document.createElementNS(ns,tag);for(var k in attrs)e.setAttribute(k,attrs[k]);parent.appendChild(e);return e}
+  function mk(tag,attrs,parent){var e=document.createElementNS(ns,tag);for(var k in attrs)e.setAttribute(k,attrs[k]);if(tag==='use'&&attrs.href)e.setAttributeNS('http://www.w3.org/1999/xlink','href',attrs.href);parent.appendChild(e);return e}
   function qpt(t,a,b,c){var u=1-t;return[u*u*a[0]+2*u*t*b[0]+t*t*c[0],u*u*a[1]+2*u*t*b[1]+t*t*c[1]]}
 
   function setLang(l){root.lang=l;$('bEn').classList.toggle('on',l==='en');$('bTe').classList.toggle('on',l==='te');try{localStorage.setItem('lang',l)}catch(e){}tick()}
@@ -659,7 +660,7 @@ html[lang=te] .back .sc{font:700 20px var(--h)}
   $('share').addEventListener('click',function(ev){ev.preventDefault();var m='You are invited to the wedding of Harshitha & Pranideep — 3rd December 2026, Jadcherla.',u=location.href.split('#')[0];
     if(navigator.share)navigator.share({title:'Wedding Invitation',text:m,url:u}).catch(function(){});else location.href='https://wa.me/?text='+encodeURIComponent(m+' '+u)});
 
-  var els=document.querySelectorAll('.fade');
+  var els=document.querySelectorAll('.fade');setTimeout(function(){[].forEach.call(els,function(e){var r=e.getBoundingClientRect();if(r.top<innerHeight*1.5)e.classList.add('in')})},2500);addEventListener('scroll',function(){[].forEach.call(els,function(e){if(e.getBoundingClientRect().top<innerHeight*.92)e.classList.add('in')})},{passive:true});
   if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.08});els.forEach(function(e){io.observe(e)})}else els.forEach(function(e){e.classList.add('in')});
 })();
 </script>
